@@ -4,19 +4,22 @@
 
 ![Food Ordering App Logo](path-to-your-logo.png)
 
-A simple and user-friendly food ordering application built with Spring Boot.
+The Food Delivery App is committed to providing a secure and efficient dining experience while prioritizing user privacy and data protection. With a strong emphasis on robust security measures we ensure the utmost confidentiality of personal information and payment details. Our platform facilitates effortless order placement seamless tracking and swift reliable delivery services. To enhance user communication and convenience our email services offer real-time updates and exclusive promotions directly to your inbox. We are dedicated to safeguarding your financial information through secure payment options prioritizing the trust and satisfaction of our valued customers.
+
 # Skills
 
-- ![Java](https://img.shields.io/badge/Java-Expert-brightgreen)
-- ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Advanced-green)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-Intermediate-yellow)
-- ![HTML](https://img.shields.io/badge/HTML-Intermediate-yellow)
-- ![CSS](https://img.shields.io/badge/CSS-Intermediate-yellow)
-- ![MongoDB](https://img.shields.io/badge/MongoDB-Intermediate-yellow)
-- ![Bootstrap 5.1](https://img.shields.io/badge/Bootstrap%205.1-Intermediate-yellow)
-- ![UI/UX Design](https://img.shields.io/badge/UI%2FUX%20Design-Beginner-lightgrey)
-- ![Git](https://img.shields.io/badge/Git-Expert-brightgreen)
-- ![GitHub](https://img.shields.io/badge/GitHub-Expert-brightgreen)
+| Skill           | Proficiency   |
+|-----------------|---------------|
+| 💻 Java          | Expert        |
+| 🚀 Spring Boot   | Advanced      |
+| 🌐 JavaScript   | Intermediate  |
+| 📄 HTML         | Intermediate  |
+| 💅 CSS          | Intermediate  |
+| 📁 MongoDB      | Intermediate  |
+| 🅱️ Bootstrap 5.1 | Intermediate |
+| 🎨 UI/UX Design | Beginner      |
+| 📚 Git          | Expert        |
+| 💼 GitHub       | Expert        |
 
 ## Features
 
