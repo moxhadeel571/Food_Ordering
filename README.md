@@ -1,37 +1,4 @@
 
-```markdown
-
-# Food Delivery App
-
-The Food Delivery App is committed to providing a secure and efficient dining experience while prioritizing user privacy and data protection.
-
-- With a strong emphasis on robust security measures, we ensure the utmost confidentiality of personal information and payment details.
-
-- Our platform facilitates effortless order placement, seamless tracking, and swift, reliable delivery services.
-
-- To enhance user communication and convenience, our email services offer real-time updates and exclusive promotions directly to your inbox.
-
-- We are dedicated to safeguarding your financial information through secure payment options, prioritizing the trust and satisfaction of our valued customers.
-
-# Skills
-
-| Skill           | Proficiency   |
-|-----------------|---------------|
-| 💻 Java          | Expert        |
-| 🚀 Spring Boot   | Advanced      |
-| 🌐 JavaScript   | Intermediate  |
-| 📄 HTML         | Intermediate  |
-| 💅 CSS          | Intermediate  |
-| 📁 MongoDB      | Intermediate  |
-| 🅱️ Bootstrap 5.1 | Intermediate |
-| 🎨 UI/UX Design | Beginner      |
-| 📚 Git          | Expert        |
-| 💼 GitHub       | Expert        |
-
-## Features
-
-- Browse a variety of dishes and cuisines.
-
 # Food Delivery App
 
 The Food Delivery App is committed to providing a secure and efficient dining experience while prioritizing user privacy and data protection.
