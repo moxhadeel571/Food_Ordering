@@ -31,7 +31,8 @@ The Food Delivery App is committed to providing a secure and efficient dining ex
 ## Features
 
 - Browse a variety of dishes and cuisines.
-![Menu](https://github.com/moxhadeel571/Food_ordering/raw/main/menu.png)
+![plot](./directory_1/directory_2/.../directory_n/plot.png)
+![plot](https://github.com/moxhadeel571/Food_ordering/raw/main/menu.png)
 - Add items to your cart.
 - Place and track your orders.
 - Secure payment processing.
