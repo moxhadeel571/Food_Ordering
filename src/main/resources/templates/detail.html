@@ -1,0 +1,277 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <!-- Your Additional CSS Files -->
+        <link href="style.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/common.css" rel="stylesheet" type="text/css">
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<style>
+    /* Define the background image and styling for the container */
+    .bg-image {
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19d38f6c-c59f-41e2-8294-8f2bb922cdb9/dcfqc5s-c821f88b-68a3-4441-8541-e98537308e70.png/v1/fill/w_965,h_828/sweet_tooth_by_0range_citrus_dcfqc5s-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODc4IiwicGF0aCI6IlwvZlwvMTlkMzhmNmMtYzU5Zi00MWUyLTgyOTQtOGYyYmI5MjJjZGI5XC9kY2ZxYzVzLWM4MjFmODhiLTY4YTMtNDQ0MS04NTQxLWU5ODUzNzMwOGU3MC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.BdXIqDPWuBl6mnLaMEMQgjYJIyYDhexMQzHdLOg5x5U');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    /* Overlay to create a semi-transparent background */
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    }
+
+    /* Centered content within the container */
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    /* Styling for the title */
+    .title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    }
+
+    .container {
+        display: block;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+    }
+    .col:hover {
+        color: blue; /* Change the text color on hover */
+    }
+
+
+    /* Styling for restaurant cards */
+    .restaurant-card {
+        margin-bottom: 20px;
+    }
+     .carousel-item  img {
+         max-width: 100%;
+         max-height: 100%;
+     }
+
+    /* Styling for headings */
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Styling for paragraphs */
+    p {
+        margin-bottom: 5px;
+        color: #777;
+    }
+
+    /* Styling for rating */
+    .rating {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .rating p {
+        margin-right: 5px;
+    }
+
+    /* Styling for tags */
+    .tags {
+        display: flex;
+        align-items: center;
+    }
+
+    .tags p {
+        margin-right: 5px;
+    }
+
+    .tag {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        padding: 2px 8px;
+        margin-right: 5px;
+    }
+
+    /* Styling for contact info and hours */
+    .contact-info, .hours {
+        font-size: 14px;
+        color: #555;
+    }
+
+
+
+    /* Styling for opening hours */
+    .hours {
+        margin-top: 5px;
+    }
+</style>
+    <body>
+    <header th:insert="fragements/header ::header(id=${id})"> </header>
+
+
+        <!-- Page Header Start -->
+    <div class="container-fluid bg-primary mb-5 bg-image">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h2 class="font-weight-semi-bold text-uppercase mb-3 text-light" >Restaurant Detail</h2>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade show active"  id="home" role="tabpanel" aria-labelledby="home-tab"><div class="container-fluid" >
+            <div class="row px-xl-5">
+                <div class="col-lg-5 pb-5">
+                    <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner border">
+                            <div class="carousel-item active">
+                                <img th:src="@{/users/MenuListing/{id}(id=${orders.id})}" alt="Restaurant Image">
+                            </div>
+                            <!-- Add more carousel items for additional images -->
+                        </div>
+                        <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                            <i class="fa fa-2x fa-angle-left text-dark"></i>
+                        </a>
+                    </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                    <div class="restaurant-card">
+                        <h1 th:text="${orders.name}">Restaurant Name</h1>
+                        <p th:text="'Availability: ' + ${orders.availability}">Availability</p>
+                        <p class="contact-info" th:text="'Contact Number: ' + ${orders.contactNumber}">Contact Number</p>
+                        <p class="hours" th:text="'Opening Hours: ' + ${orders.openingHours} + ' - ' + ${orders.closingHours}">Opening Hours</p>
+                    </div>
+                </div>
+                <div class="col-xl-auto">
+                    <h3 class="font-weight-semi-bold" th:text="${orders.itemName}"></h3>
+                    <h3 class="font-weight-semi-bold mb-4" th:text="${orders.price}"></h3>
+                    <div class="card-body">
+                        <h2 class="font-weight-semi-bold">Description</h2>
+                        <p class="font-weight-light" th:text="${orders.description}"></p>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="font-weight-semi-bold">Ingredients</h2>
+                        <p class="font-weight-light" th:text="${orders.ingredients}"></p>
+                        <h6 class="mb-0" th:text="${orders.price}"></h6>
+                    </div>
+
+                    <div class="col-md-1 col-lg-1 col-xl-2">
+                        <div class="d-flex flex-column">
+                            <div class="input-group mb-3" style="width: 130px;">
+                                <select class="form-select form-control text-center border border-secondary quantity-select"
+                                        th:name="'quantity-' + ${orders.id}" th:id="'quantity-' + ${orders.id}" aria-label="Select quantity">
+                                    <option th:each="quantityOption : ${#numbers.sequence(1, 5)}" th:value="${quantityOption}" th:text="${quantityOption}"></option>
+                                    <option th:each="quantityOption : ${#numbers.sequence(1, 5)}" th:value="${quantityOption}" th:text="${quantityOption}"
+                                            th:selected="${quantityOption == orders.quantity}"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <a th:href="@{/users/cart/{id}(id=${orders.id})}" class="btn btn-primary ">Add to Cart</a>
+            </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="container">
+                <figure class="figure">
+                    <!-- Use th:if to check if menuPhoto is not null before displaying the image -->
+                    <div class="img-thumbnail" >
+                        <img th:src="@{/users/MenuPhoto/{MenuId}(MenuId=${menuPhoto.id})}" class="figure-img img-fluid rounded" name="MenuId" alt="Menu Photo">
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <footer th:insert="fragements/footer :: footer(id=${id})"></footer>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".minus-btn").click(function () {
+                var productId = $(this).data("product-id");
+                updateQuantity(productId, -1);
+            });
+
+            $(".plus-btn").click(function () {
+                var productId = $(this).data("product-id");
+                updateQuantity(productId, 1);
+            });
+
+            function updateQuantity(productId, change) {
+                $.ajax({
+                    type: "POST",
+                    url: "/users/updateQuantity",
+                    data: {
+                        productId: productId,
+                        change: change
+                    },
+                    success: function (data) {
+                        var quantityInput = $("#quantity-" + productId);
+                        quantityInput.val(data.quantity);
+
+                        var priceElement = $("#price-" + productId);
+                        priceElement.text(data.price);
+
+                        var totalPriceElement = $("#totalPrice");
+                        totalPriceElement.text(data.totalPrice);
+                    },
+                    error: function () {
+                        alert("An error occurred while updating the quantity.");
+                    }
+                });
+            }
+        });
+
+    </script>
+    </body>
+
+    </html>

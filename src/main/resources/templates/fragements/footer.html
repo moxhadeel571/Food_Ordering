@@ -1,0 +1,61 @@
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+
+<footer th:fragment="footer">
+
+<div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <a href="" class="text-decoration-none">
+                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Food</h1>
+                </a>
+                <p>Satisfy your cravings with e-food. Order online for a delicious and convenient dining experience. Explore a world of flavors at your fingertips..</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2" href="/users/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-dark mb-2" href="/users/RestaurantListing"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                            <a class="text-dark mb-2" href="/users/cart"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                            <a class="text-dark mb-2" href="/users/checkout"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Stay Updated</h5>
+                        <div class="newsletter-decor">
+                            <p class="text-muted mb-3">Be the first to know about our latest offers and delicious updates.</p>
+                            <div class="subscribe-box">
+                            </div>
+                                <p class="mb-2">Subscribe to our newsletter:</p>
+                                <div class="input-group">
+                                    <form class="form-horizontal" th:action="@{/users/send_email}" method="post">
+                                        <input type="email" class="form-control border-0 py-2 px-3" name="to" placeholder="Your Email" required="required" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary border-0 py-2 px-4" type="submit">Go</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row border-top border-light mx-xl-5 py-4">
+            <div class="col-md-12">
+                <p class="mb-md-0 text-center text-md-center text-dark">
+                    &copy; <a class="text-dark font-weight-semi-bold" href="#">E-Food</a>. All Rights Reserved. Designed by <a class="text-dark font-weight-semi-bold" href="https://htmlcodex.com">E-Food</a><br>
+                    Distributed By <a href="https://github.com/moxhadeel571" target="_blank">Joy Boy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

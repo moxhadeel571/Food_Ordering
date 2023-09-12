@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RESTAURENT DASHBOARD </title>
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Your Additional CSS Files -->
+    <link href="style.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+    <!-- JavaScript -->
+
+
+</head>
+
+<style>
+    .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;}
+</style>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-FOOD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="dropdown-item" th:href="@{/users/orders}">Orders</a>
+        <a href="/logout" class="dropdown-item">Logout</a>
+    </div>
+</nav>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert"  th:if="${showAlert}">
+    <strong>Item Added</strong> You should check in.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<nav class="sidebar">
+<div class="container-fluid">
+    <div class="row align-items-center py-3 px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+            <a href="" class="text-decoration-none">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Food</h1>
+            </a>
+        </div>
+    </div>
+</div>
+</nav>
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Welcome to the Admin Page</h1>
+    </div>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Orders</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Form</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Menu</button>
+    </li>
+
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><div class="container">
+        <h1 class="mt-4">View Orders</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="orders : ${order}">
+                <td th:text="${orders.id}"></td>
+                <td th:text="${orders.firstName}"></td>
+                <td th:text="${orders.lastName}"></td>
+                <td th:text="${orders.email}"></td>
+                <td th:text="${orders.phone}"></td>
+                <td th:text="${total}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>  </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"> <div class="card card-body">
+        <div class="container">
+            <h1>Food Form</h1>
+            <form th:object="${MenuForm}"  method="post" th:action="@{/admin/save-menu}" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label"></label>
+                    <input type="text" class="form-control" id="name" th:field="*{name}" placeholder="Enter restaurant name" reuired>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label"></label>
+                    <input type="text" class="form-control" id="address" name="address" th:field="*{address}" placeholder="Enter restaurant address">
+                </div>
+
+                <div class="mb-3">
+                    <label for="availability" class="form-label"></label>
+                    <textarea class="form-control" id="availability" th:field="*{availability}" rows="7" placeholder="Enter restaurant availability for each day (Monday to Sunday)"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label"></label>
+                    <input type="text" class="form-control" id="contactNumber" th:field="*{contactNumber}" placeholder="Enter Contact Number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="openingHours" class="form-label">Opening Hours</label>
+                    <input type="time" class="form-control" name="orderTime" id="openingHours" th:field="*{openingHours}" placeholder="Enter Opening Hours" required>
+                </div>
+                <div class="mb-3">
+                    <label for="closingHOurs" class="form-label">Closing Hours</label>
+
+                    <input type="time" class="form-control" name="orderTime" id="closingHOurs" th:field="*{closingHours}" placeholder="Enter Closing Hours" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="itemName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="itemName" th:field="*{itemName}" placeholder="Enter name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" th:field="*{price}" placeholder="Enter price" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" th:field="*{quantity}" placeholder="Enter quantity" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Select Cuisine" id="cuisine" name="category">
+                        <option selected disabled>Select Cuisine</option>
+                        <option value="south_Indian">South Indian</option>
+                        <option value="western">Western</option>
+                        <option value="deccani">Deccani</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="north_Indian">North Indian</option>
+                        <option value="punjabi">Punjabi</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Enter description" th:field="*{description}" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients</label>
+                    <textarea class="form-control" id="ingredients" rows="3" placeholder="Enter description" th:field="*{ingredients}" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="photo-data" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="photo-data" multiple="multiple" name="photo-data" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div></div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">  <div class="card card-body">
+        <div class="container-fluid">
+            <h1>Menu</h1>
+            <form th:object="${MenuPhoto}" method="post" th:action="@{/admin/save-menuPhoto}" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="MenuPhotoData" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="MenuPhotoData" name="MenuPhotoData" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div></div>
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<br>
+<footer th:insert="fragements/footer :: footer"></footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+

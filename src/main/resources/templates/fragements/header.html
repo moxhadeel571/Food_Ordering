@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Your head content -->
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<header th:fragment="header(id)">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary " style="background-color: #D19C97;">
+            <div class="container-fluid"  >
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto py-0">
+                        <a th:href="@{/home}" class="nav-item nav-link">Home</a>
+                        <a th:href="@{/users/MenuListing}" class="nav-item nav-link">Shop</a>
+                        <a th:href="@{/users/RestaurantListing/{id}}" class="nav-item nav-link active">Shop Detail</a>
+                        <a th:href="about.html" class="nav-item nav-link active">About</a>
+                    </div>
+                    <div class="navbar-nav my-2 my-2 my-sm-0">
+                        <div class="nav-item dropdown" >
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="fas fa-shopping-cart"></i> <!-- Replace with the appropriate icon class -->
+                            </a>
+                            <div class="dropdown-menu  dropdown-menu-right rounded-0 m-0">
+                                <a th:href="@{/users/cart/{id}(id=${id})}" class="dropdown-item">Shopping Cart</a>
+                                <div class="dropdown-divider"></div>
+                                <a th:href="@{/users/checkout/{id}(id=${id})}" class="dropdown-item">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item  dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            My Profile
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right rounded-0 m-0">
+                            <a href="#" class="dropdown-item" th:href="@{/users/orders}">Orders</a>
+                            <a href="/logout" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</header>

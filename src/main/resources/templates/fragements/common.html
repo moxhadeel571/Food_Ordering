@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <!-- Your head content -->
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<header th:fragment="common">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #D19C97;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" th:href="@{/home}">Home</a>
+            <a class="nav-item nav-link active" th:href="@{/about}">About</a>
+          </div>
+
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" th:href="@{/signin}">Login</a>
+            <a class="nav-item nav-link" href="/register">Registration</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+</header>
