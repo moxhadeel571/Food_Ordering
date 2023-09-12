@@ -1,4 +1,3 @@
-Creating a README for your GitHub repository is a great way to provide information about your project to potential users and collaborators. Here's a basic template for a README file for your food ordering project on GitHub:
 
 ```markdown
 # Food Ordering App
