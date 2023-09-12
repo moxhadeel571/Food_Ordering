@@ -5,6 +5,18 @@
 ![Food Ordering App Logo](path-to-your-logo.png)
 
 A simple and user-friendly food ordering application built with Spring Boot.
+# Skills
+
+- ![Java](https://img.shields.io/badge/Java-Expert-brightgreen)
+- ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Advanced-green)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-Intermediate-yellow)
+- ![HTML](https://img.shields.io/badge/HTML-Intermediate-yellow)
+- ![CSS](https://img.shields.io/badge/CSS-Intermediate-yellow)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-Intermediate-yellow)
+- ![Bootstrap 5.1](https://img.shields.io/badge/Bootstrap%205.1-Intermediate-yellow)
+- ![UI/UX Design](https://img.shields.io/badge/UI%2FUX%20Design-Beginner-lightgrey)
+- ![Git](https://img.shields.io/badge/Git-Expert-brightgreen)
+- ![GitHub](https://img.shields.io/badge/GitHub-Expert-brightgreen)
 
 ## Features
 
