@@ -33,8 +33,7 @@
 
     @Controller
     public class UserController {
-    @Autowired
-    private PaypalService paypalService;
+
 
     @Autowired
     private MenuPhotoRepository menuPhotoRepository;
