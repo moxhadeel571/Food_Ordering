@@ -61,11 +61,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch: `git push origin feature/your-feature`.
 5. Create a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Customize the README with your project's specific details, such as project description, features, installation instructions, usage guidelines, contributing instructions, and license information. Don't forget to replace `your-username` and `path-to-your-logo.png` with your GitHub username and the path to your project's logo or relevant image.
-
-Save this content as a file named `README.md` in the root directory of your GitHub repository. When you push this file to GitHub, it will automatically be displayed on your repository's main page, providing helpful information to users and contributors.
